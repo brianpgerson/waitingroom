@@ -1,6 +1,5 @@
 .btn {
     border: 2px solid #1a1a1a;
-
     padding: 10px 15px;
     border-radius: 5px;
     transform: translate(-4px, -4px);
@@ -12,8 +11,17 @@
     background: aliceblue;
 }
 
-.btn div {
+.btn .change {
     background-image: url(images/change-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 40px;
+    width: 50px;
+}
+
+.btn .play {
+    background-image: url(images/play.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;

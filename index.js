@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const backgroundImage = document.querySelector('.background-image');
     const backgroundMusic = document.getElementById("background-music");
     const changeButton = document.getElementById("change-button");
+    const audio = document.getElementById('background-music');
+    // const ctrl = document.getElementById('play-button');
+    const ctrlDiv = document.querySelector('div.play')
 
     const images = [ 
         "images/arcade.gif" ,
@@ -68,7 +71,7 @@ const music = [
         return [arr[randomIndex], randomIndex];
     }
 
-    function changeContent() {
+    function changeContent(forcePlaying = false) {
         let [randomImage, newImageIndex]  = getRandomNewElement(currentImageIndex, images);
         let [randomMusic, newMusicIndex]  = getRandomNewElement(currentMusicIndex, music);
         let [randomFont, newFontIndex]  = getRandomNewElement(currentFontIndex, googleFonts);
@@ -80,9 +83,31 @@ const music = [
         backgroundImage.style.backgroundImage = `url('${randomImage}')`;
         document.body.style.fontFamily = randomFont;
         backgroundMusic.src = randomMusic;
+
+        if (forcePlaying) {
+            ctrlDiv.style.backgroundImage = `url('images/pause.png')`;
+        }
     }
 
-    changeButton.addEventListener("click", changeContent);
+    ctrlDiv.addEventListener("click",  () => {
+        // Update the Button
+        const isPaused = ctrlDiv.getAttribute("data-status") === 'paused';
+        ctrlDiv.style.backgroundImage = isPaused ? `url('images/pause.png')` : `url('images/play.png')`
+        
+        // Update the Audio
+        if (isPaused) {
+            ctrlDiv.setAttribute("data-status", "playing");
+            audio.play()
+        } else {
+            ctrlDiv.setAttribute("data-status", "paused");
+            audio.pause()
+        }
+
+        // Prevent Default Action
+        return false;
+    });
+
+    changeButton.addEventListener("click", () => changeContent(true));
 
     // Initial content load
     changeContent();

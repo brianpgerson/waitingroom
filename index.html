@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Waiting Room</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Fondamento&family=Fredericka+the+Great&family=Shrikhand&family=Sixtyfour&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -16,11 +17,14 @@
     </header>
     <main>
         <div class="content">
-            <button id="change-button" class="btn"><div></div></button>
-            <audio id="background-music" controls autoplay loop>
-                <source src="" type="audio/mp3">
-            </audio>
+            <button id="change-button" class="btn"><div class="change"></div></button>
+            <button id="play-button" class="btn">
+                <div class="play" data-status="paused"></div>
+            </button>
         </div>
+        <audio id="background-music" controls autoplay loop>
+            <source src="" type="audio/mp3">
+        </audio>
     </main>
     <script src="index.js"></script>
 </body>
