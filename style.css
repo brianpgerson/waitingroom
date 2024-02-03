@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(''); /* Leave this empty initially */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+ }
+ 
+header {
+    color: #FFF;
+    text-align: center;
+    padding: 1rem;
+    min-height: 300px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 5em;
+    text-shadow: rgba(0,0,0,0.9) 0px 0px 12px;
+}
+
+.content {
+    position: fixed;
+    bottom: 10%;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+
+ /* Add a new CSS class for controlling the background image */
+ .background-image {
+    background-image: url(''); /* Leave this empty initially */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh; /* Ensure the background covers the entire viewport height */
+ }
+
+audio {
+    display: none;
+}
+
+/* Add dark mode styles here */
