@@ -29,19 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 const music = [
-    'music/angela.mp3',
-    'music/energy.mp3',
-    'music/holdonme.mp3',
-    'music/jungle.mp3',
-    'music/longer.mp3',
-    'music/lovedelux.mp3',
-    'music/lovegalaxy.mp3',
-    'music/memora.mp3',
-    'music/moonlight.mp3',
-    'music/nyc.mp3',
-    'music/toysoldiers.mp3',
-    'music/twin.mp3',
-    'music/warmpop.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/angela.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/energy.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/holdonme.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/jungle.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/longer.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/lovedelux.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/lovegalaxy.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/memora.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/moonlight.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/nyc.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/toysoldiers.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/twin.mp3',
+    'https://waiting-room-media.s3.amazonaws.com/warmpop.mp3',
 ];
 
     let currentImageIndex = 0;
