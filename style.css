@@ -47,4 +47,27 @@ audio {
     display: none;
 }
 
-/* Add dark mode styles here */
+/* Mobile Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Adjust font size for better readability on mobile devices */
+    }
+ 
+    header h1{
+        margin-top: 100px;
+        font-size: 2rem; /* Increase header font size for better visibility */
+    }
+ 
+    main {
+        padding: 1rem; /* Add padding to main content for spacing */
+    }
+ 
+    .content {
+        text-align: center;
+    }
+ 
+    .image-container {
+        margin: 0; /* Remove margin to save space */
+    }
+
+ }
